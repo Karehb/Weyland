@@ -49,8 +49,8 @@ html, body {
 body {
   font-size: 11pt;
   font-family: Inconsolata, monospace;
-  color: white;
-  background-color: #192617;
+  color: #59ff00;
+  background-color: #192b1d;
 }
 #container {
   padding: .1em 1.5em 1em 1em;
