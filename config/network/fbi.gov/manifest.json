@@ -1,0 +1,7 @@
+{
+    "serverAddress": "fbi.gov",
+    "serverName": "Federal Bureau of Investigation",
+    "iconName": "fbi.png",
+    "terminalID": "fbi",
+    "randomSeed": true
+}

@@ -1,0 +1,12 @@
+{
+    "serverAddress": "111.222.3.4",
+    "serverName": "FreeNode",
+    "iconName": "world.svg",
+    "terminalID": "freenode",
+    "defaultUser": {
+        "userId": "user",
+        "password": "",
+        "userName": "anonymous"
+    },
+    "randomSeed": true
+}
