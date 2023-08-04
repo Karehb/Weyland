@@ -1,8 +1,8 @@
 {
     "serverAddress": "localhost",
-    "serverName": "Weyland",
+    "serverName": "Hadley's Hope",
     "iconName": "hopes.jpg",
-    "terminalID": "YYYYY56",
+    "terminalID": "ComputadoraCentral",
     "defaultUser": {
         "userId": "user",
         "password": "",
