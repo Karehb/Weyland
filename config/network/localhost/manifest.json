@@ -1,7 +1,7 @@
 {
     "serverAddress": "localhost",
     "serverName": "Hadley's Hope",
-    "iconName": "hopes.jpg",
+    "iconName": "weyland_yutani_logo.gif",
     "terminalID": "",
     "defaultUser": {
         "userId": "user",
