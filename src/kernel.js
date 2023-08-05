@@ -20,7 +20,7 @@ function debugObject( obj ) {
  *
  * @param {String} msg A message to be showed when done
  */
-function setHeader( msg = "⠀" ) {
+function setHeader( msg = "testeando 1" ) {
     // Setting correct header icon and terminal name
     const date = new Date();
     if ( serverDatabase.year ) {
@@ -33,7 +33,7 @@ function setHeader( msg = "⠀" ) {
     <img align="left" src="config/network/${ serverDatabase.serverAddress }/${ serverDatabase.iconName }" width="500" height="281" style="padding: 0px 10px 20px 0px">
     <h2 style="letter-spacing: 4px">${ serverDatabase.serverName }</h2>
     <p>Conectado a: ${ serverDatabase.serverAddress } ( ${ dateStr } ) </p>
-    <p>Escribew "help" para mas informacion.</p>
+    <p>Escribe "help" para mas informacion.</p>
     `;
     // Clear content:
     output_.innerHTML = "";
@@ -183,7 +183,7 @@ kernel.connectToServer = function connectToServer( serverAddress, userName, pass
                 $.get( `config/network/${ serverInfo.serverAddress }/mailserver.json`, ( mails ) => {
                     mailList = mails;
                 } );
-                setHeader( "Connection successful" );
+                setHeader( "Conexión establecida" );
                 resolve();
             } else if ( userName ) {
                 $.get( `config/network/${ serverInfo.serverAddress }/userlist.json`, ( users ) => {
@@ -202,7 +202,7 @@ kernel.connectToServer = function connectToServer( serverAddress, userName, pass
                     $.get( `config/network/${ serverInfo.serverAddress }/mailserver.json`, ( mails ) => {
                         mailList = mails;
                     } );
-                    setHeader( "Connection successful" );
+                    setHeader( "Conexión establecida" );
                     resolve();
                 } ).fail( () => {
                     reject( new AddressNotFoundError( serverAddress ) );
@@ -304,14 +304,14 @@ system = {
                 Array.prototype.push.apply( commands, Object.keys( programs ).filter( ( pName ) => !programs[ pName ].secretCommand ) );
                 commands.sort();
                 resolve( [
-                    "You can read the help of a specific command by entering as follows: 'help commandName'",
-                    "List of useful commands:",
+                    "Puedes leer la ayuda de cada comando escribiendo: 'help commandName'",
+                    "Lista de comandos útiles:",
                     `<div class="ls-files">${ commands.join( "<br>" ) }</div>`,
-                    "You can navigate in the commands usage history using the UP & DOWN arrow keys.",
-                    "The TAB key will provide command auto-completion."
+                    "Puedes navegar por el historial de comandos utilizados usando las teclas de flechas UP y DOWN.",
+                    "La tecla TAB auto-completara los comandos."
                 ] );
             } else if ( args[ 0 ] === "clear" ) {
-                resolve( [ "Usage:", "> clear", "The clear command will completely wipeout the entire screen, but it will not affect the history." ] );
+                resolve( [ "Usage:", "> clear", "El comando Clear limpiara la pantalla pero no afectara al historial." ] );
             } else if ( args[ 0 ] === "date" ) {
                 resolve( [ "Usage:", "> date", "The date command will print the current date-time into terminal." ] );
             } else if ( args[ 0 ] === "echo" ) {
