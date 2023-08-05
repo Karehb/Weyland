@@ -32,8 +32,8 @@ function setHeader( msg = "⠀" ) {
     const header = `
     <img align="left" src="config/network/${ serverDatabase.serverAddress }/${ serverDatabase.iconName }" width="200" height="100" style="padding: 0px 10px 20px 0px">
     <h2 style="letter-spacing: 4px">${ serverDatabase.serverName }</h2>
-    <p>Logged in: ${ serverDatabase.serverAddress } ( ${ dateStr } ) </p>
-    <p>Enter "help" for more information.</p>
+    <p>Conectado a: ${ serverDatabase.serverAddress } ( ${ dateStr } ) </p>
+    <p>Escribew "help" para mas informacion.</p>
     `;
     // Clear content:
     output_.innerHTML = "";
