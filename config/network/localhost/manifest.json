@@ -2,7 +2,7 @@
     "serverAddress": "localhost",
     "serverName": "Hadley's Hope",
     "iconName": "hopes.jpg",
-    "terminalID": "ComputadoraCentral",
+    "terminalID": "",
     "defaultUser": {
         "userId": "user",
         "password": "",
