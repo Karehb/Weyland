@@ -30,10 +30,10 @@ function setHeader( msg = "testeando 1" ) {
 
     const dateStr = `${ date.getDate() }/${ ( 1 + date.getMonth() ).toString().padStart( 2, "0" ) }/${ 2000 + date.getYear() }`;
     const header = `
-    <img align="left" src="config/network/${ serverDatabase.serverAddress }/${ serverDatabase.iconName }" width="500" height="281" style="padding: 0px 10px 20px 0px">
+    <img align="left" src="config/network/${ serverDatabase.serverAddress }/${ serverDatabase.iconName }" width="400" height="225" style="padding: 0px 10px 20px 0px">
     <h2 style="letter-spacing: 4px">${ serverDatabase.serverName }</h2>
     <p>Conectado a: ${ serverDatabase.serverAddress } ( ${ dateStr } ) </p>
-    <p>Escribe "help" para mas informacion.</p>
+    <p>Escribe "help" para más información.</p>
     `;
     // Clear content:
     output_.innerHTML = "";
@@ -254,13 +254,13 @@ kernel.init = function init( cmdLineContainer, outputContainer ) {
 system = {
     dumpdb() {
         return new Promise( () => {
-            output( ":: serverDatabase - connected server information" );
+            output( ":: serverDatabase - información del servidor conectado" );
             debugObject( serverDatabase );
             output( "----------" );
-            output( ":: userDatabase - connected user information" );
+            output( ":: userDatabase - información del usuario conectado" );
             debugObject( userDatabase );
             output( "----------" );
-            output( ":: userList - list of users registered in the connected server" );
+            output( ":: userList - lista de usuarios registrados en el servidor" );
             debugObject( userList );
         } );
     },
@@ -304,54 +304,49 @@ system = {
                 Array.prototype.push.apply( commands, Object.keys( programs ).filter( ( pName ) => !programs[ pName ].secretCommand ) );
                 commands.sort();
                 resolve( [
-                    "Puedes leer la ayuda de cada comando escribiendo: 'help commandName'",
+                    "Puedes leer la ayuda de cada comando escribiendo: 'help nombreComando'",
                     "Lista de comandos útiles:",
                     `<div class="ls-files">${ commands.join( "<br>" ) }</div>`,
                     "Puedes navegar por el historial de comandos utilizados usando las teclas de flechas UP y DOWN.",
                     "La tecla TAB auto-completara los comandos."
                 ] );
             } else if ( args[ 0 ] === "clear" ) {
-                resolve( [ "Usage:", "> clear", "El comando Clear limpiara la pantalla pero no afectara al historial." ] );
+                resolve( [ "Úso:", "> clear", "El comando clear limpiara la pantalla pero no afectara al historial." ] );
             } else if ( args[ 0 ] === "date" ) {
-                resolve( [ "Usage:", "> date", "The date command will print the current date-time into terminal." ] );
+                resolve( [ "Úso:", "> date", "El comando date imprimira la fecha actual en la terminal." ] );
             } else if ( args[ 0 ] === "echo" ) {
-                resolve( [ "Usage:", "> echo args", "The echo command will print args into terminal." ] );
+                resolve( [ "Úso:", "> echo args", "El comando echo imprimira args en la terminal." ] );
             } else if ( args[ 0 ] === "help" ) {
-                resolve( [ "Usage:", "> help", "The default help message. It will show some of the available commands in a server." ] );
+                resolve( [ "Úso:", "> help", "El mensaje help por defecto. Mostrara algunos de los comandos disponibles en el servidor." ] );
             } else if ( args[ 0 ] === "login" ) {
-                resolve( [ "Usage:", "> login username:password", "Switch account: log in as another registered user on the server, to access your data files and messages." ] );
+                resolve( [ "Úso:", "> login usuario:contraseña", "Cambiar de cuenta: conectate como otro usuario registrado en el servidor, para acceder a tus archivos y mensajes." ] );
             } else if ( args[ 0 ] === "mail" ) {
-                resolve( [ "Usage:", "> mail", "If you're logged in you can list your mail messages if any." ] );
+                resolve( [ "Úso:", "> mail", "Si estas conectado podras ver la lista de mensajes si es que hay alguno." ] );
             } else if ( args[ 0 ] === "ping" ) {
-                resolve( [
-                    "Usage:",
-                    "> ping address",
-                    "The ping command will try to reach a valid address.",
-                    "If the ping doesn't return a valid response, the address may be incorrect, may not exist or can't be reached locally."
-                ] );
+                resolve( [ "Úso:", "> ping address", "El comando ping intentara alcanzar una dirección valida.", 
+						     "Si el ping no devuelve una respuesta valida, la dirección podría ser incorrecta, no existir o no ser alcanzable de forma local." ] );
             } else if ( args[ 0 ] === "read" ) {
-                resolve( [ "Usage:", "> read x", "If you're logged in you can read your mail messages if any." ] );
+                resolve( [ "Úso:", "> read x", "Si estas conectado podras leer tus mensajes si hubiese alguno." ] );
             } else if ( args[ 0 ] === "ssh" ) {
                 resolve( [
-                    "Usage:",
-                    "> ssh address",
-                    "> ssh username@address",
-                    "> ssh username:password@address",
-                    "You can connect to a valid address to access a specific server on the Internet.",
-                    "You may need to specify a username if the server has no default user.",
-                    "You may need to specify a password if the user account is protected."
-                ] );
+                    "Úso:",
+                    "> ssh dirección",
+                    "> ssh usuario@dirección",
+                    "> ssh usuario:contraseña@dirección",
+                    "Puedes conectarte a una dirección valida para acceder a un servidor especifico de internet.",
+                    "Podrias necesitar especificar un usuario si el servidor no tiene un usuario por defecto.",
+                    "Podrias necesitar especificar una contraseña si la cuenta de usuario esta protegida." ] );
             } else if ( args[ 0 ] === "whoami" ) {
-                resolve( [ "Usage:", "> whoami", "Display the server you are currently connected to, and the login you are registered with." ] );
+                resolve( [ "Úso:", "> whoami", "Muestra el servidor al que estas actualmente conectado y el login con el que estas registrado." ] );
             } else if ( args[ 0 ] in softwareInfo ) {
                 const customProgram = programs[ args[ 0 ] ];
                 if ( customProgram.help ) {
-                    resolve( [ "Usage:", `> ${ args[ 0 ] }`, customProgram.help ] );
+                    resolve( [ "Úso:", `> ${ args[ 0 ] }`, customProgram.help ] );
                 }
             } else if ( args[ 0 ] in system && args[ 0 ] !== "dumpdb" ) {
-                console.error( `Missing help message for system command: ${ args[ 0 ] }` );
+                console.error( `No se ha encontrado help para el comando de sistema: ${ args[ 0 ] }` );
             } else {
-                resolve( [ `Unknow command ${ args[ 0 ] }` ] );
+                resolve( [ `Comando desconocido ${ args[ 0 ] }` ] );
             }
         } );
     },
@@ -384,7 +379,7 @@ system = {
                 return;
             }
             userDatabase = matchingUser;
-            setHeader( "Login successful" );
+            setHeader( "login establecio" );
             resolve();
         } );
     },
@@ -456,7 +451,7 @@ system = {
             }
 
             $.get( `config/network/${ args }/manifest.json`, ( serverInfo ) => {
-                resolve( `Server ${ serverInfo.serverAddress } (${ serverInfo.serverName }) can be reached` );
+                resolve( `El servidor ${ serverInfo.serverAddress } (${ serverInfo.serverName }) no se puede acceder` );
             } )
                 .fail( () => reject( new AddressNotFoundError( args ) ) );
         } );
@@ -464,7 +459,7 @@ system = {
 
     telnet() {
         return new Promise( ( _, reject ) => {
-            reject( new Error( "telnet is unsecure and is deprecated - use ssh instead" ) );
+            reject( new Error( "telnet es inseguro y esta obsoleto - usa ssh en su lugar" ) );
         } );
     },
 
