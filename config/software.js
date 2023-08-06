@@ -64,17 +64,9 @@ const DWEETS = {
             x.stroke();
         }
     } ),
-    10534: () => dweet( ( t, x ) => { // FROM: https://www.dwitter.net/d/10534
+    10534: () => {
 	return "<p>Some encrypted text must be provided: <code>decrypt 53CR3T T3XT</code></p>";
-        t += 160;
-        let n;
-        for ( let i = 2e3; i--; ) {
-            const p = i & 1;
-            const m = ( t / C( t / i ) + p * ( t / 2 + i % t ) ) / 5;
-            const s = ( 3 - C( n ) * 3 ) / 3;
-            x.fillRect( 100 + m * S( n = t / 9 + i * i ) * C( !p * i / t ), 100 + m * C( n + p * 2 ), s, s );
-        }
-    } ),
+    },
     5600: () => dweet( ( t, x, c ) => { // FROM: https://www.dwitter.net/d/5600
         const h = c.width;
         for ( let i = h; i--; ) {
