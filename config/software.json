@@ -25,10 +25,10 @@
             "System successfully corrupted!"
         ]
     },
-    "mapa.exe": {
+    "mapa": {
         "location": ["127.0.0.1", "localhost"],
         "message": [
-	    "<p class=desync>MAPA DE HADLEY'S HOPE</p>",
+	    "<p>MAPA DE HADLEY'S HOPE</p>",
             "<img src=config/colonia.jpg style='width: 10rem' class=glitch>"
         ]
     },
