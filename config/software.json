@@ -27,9 +27,11 @@
     },
     "mapa": {
         "location": ["127.0.0.1", "localhost"],
+        "help": "Muestra la el mapa de la colonia",
+        "clear": true,
         "message": [
 	    "<p>MAPA DE HADLEY'S HOPE</p>",
-            "<img src=config/colonia.jpg style='width: 100%' class=glitch>"
+            "<img src=config/colonia.jpg style='width: 80%' class=glitch>"
         ]
     },
     "artifact": {},
