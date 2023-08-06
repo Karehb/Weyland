@@ -3,84 +3,84 @@
 class CommandNotFoundError extends Error {
     constructor( command ) {
         super();
-        this.message = `${ command }: command not found`;
+        this.message = `${ command }: comando no encontrado`;
     }
 }
 
 class InvalidCommandParameter extends Error {
     constructor( command ) {
         super();
-        this.message = `Invalid parameters pased to command ${ command }`;
+        this.message = `Parametros invalidos en el comando ${ command }`;
     }
 }
 
 class AddressNotFoundError extends Error {
     constructor( address ) {
         super();
-        this.message = `Error : address ${ address } can't be reached`;
+        this.message = `Error : la dirección ${ address } no se encuentra`;
     }
 }
 
 class AddressIsEmptyError extends Error {
     constructor() {
         super();
-        this.message = "Error: You need to specify an address";
+        this.message = "Error: Necesitas especificar una dirección";
     }
 }
 
 class UsernameIsEmptyError extends Error {
     constructor() {
         super();
-        this.message = "Empty user name provided";
+        this.message = "Nombre de usuario vacio";
     }
 }
 
 class InvalidCredsSyntaxError extends Error {
     constructor() {
         super();
-        this.message = "Invalid syntax for credentials provided: either provide just a username, or username:password";
+        this.message = "Sintaxis incorrecta: inserta un nombre de usuario o usuario:contraseña";
     }
 }
 
 class InvalidPasswordError extends Error {
     constructor( userName ) {
         super();
-        this.message = `Invalid password provided for ${ userName }`;
+        this.message = `Contrañesa incorrecta para ${ userName }`;
     }
 }
 
 class MailServerIsEmptyError extends Error {
     constructor() {
         super();
-        this.message = "There is no new mail registered.";
+        this.message = "No hay nuevos correos registrados";
     }
 }
 
 class InvalidMessageKeyError extends Error {
     constructor() {
         super();
-        this.message = "Invalid message key.";
+        this.message = "Número de mensaje incorrecto.";
     }
 }
 
 class AlreadyOnServerError extends Error {
     constructor( serverAddress ) {
         super();
-        this.message = `You already are at ${ serverAddress }`;
+        this.message = `Ya estas en ${ serverAddress }`;
     }
 }
 
 class UnknownUserError extends Error {
     constructor( userName ) {
         super();
-        this.message = `Unknown user ${ userName }`;
+        this.message = `Usuario desconocido ${ userName }`;
     }
 }
 
 class ServerRequireUsernameError extends Error {
     constructor( serverAddress ) {
         super();
-        this.message = `Server require a username to be accessed: ssh username@${ serverAddress }`;
+        this.message = `El servidor necesita un nombre de usuario para acceder: ssh username@${ serverAddress }`;
     }
 }
 

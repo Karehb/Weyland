@@ -20,7 +20,7 @@ function debugObject( obj ) {
  *
  * @param {String} msg A message to be showed when done
  */
-function setHeader( msg = "Bienvenido al Interface interno de Hadley's Hope" ) {
+function setHeader( msg = " " ) {
     // Setting correct header icon and terminal name
     const date = new Date();
     if ( serverDatabase.year ) {
@@ -28,11 +28,12 @@ function setHeader( msg = "Bienvenido al Interface interno de Hadley's Hope" ) {
     }
     const promptText = `[${ userDatabase.userName }@${ serverDatabase.terminalID }] # `;
 
-    const dateStr = `${ date.getDate() }/${ ( 1 + date.getMonth() ).toString().padStart( 2, "0" ) }/${ 2000 + date.getYear() }`;
+    const dateStr = `${ date.getDate() }/${ ( 1 + date.getMonth() ).toString().padStart( 2, "0" ) }/${ 2056 + date.getYear() }`;
     const header = `
     <img align="left" src="config/network/${ serverDatabase.serverAddress }/${ serverDatabase.iconName }" width="400" height="225" style="padding: 0px 0px 0px 0px">
-    <h2 style="letter-spacing: 4px">${ serverDatabase.serverName }</h2>
+    <h1 style="letter-spacing: 4px">${ serverDatabase.serverName }</h1>
     <p>Conectado a: ${ serverDatabase.serverAddress } ( ${ dateStr } ) </p>
+    <p>ALERTA situación excepcional activada.</p>
     <p>Escribe "help" para más información.</p>
     `;
     // Clear content:
@@ -290,11 +291,13 @@ system = {
         } );
     },
 
-    echo( args ) {
-        return new Promise( ( resolve ) => {
-            resolve( args.join( " " ) );
-        } );
-    },
+/**
+ *    echo( args ) {
+ *        return new Promise( ( resolve ) => {
+ *            resolve( args.join( " " ) );
+ *        } );
+ *    },
+ */
 
     help( args ) {
         return new Promise( ( resolve ) => {
