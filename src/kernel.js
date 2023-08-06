@@ -266,13 +266,15 @@ system = {
         } );
     },
 
-    whoami() {
-        return new Promise( ( resolve ) => {
-            resolve(
-                `${ serverDatabase.serverAddress }/${ userDatabase.userId }`
-            );
-        } );
-    },
+/**
+ *    whoami() {
+ *        return new Promise( ( resolve ) => {
+ *            resolve(
+ *                `${ serverDatabase.serverAddress }/${ userDatabase.userId }`
+ *            );
+ *        } );
+ *    },
+ */
 
     clear() {
         return new Promise( ( resolve ) => {
@@ -281,15 +283,17 @@ system = {
         } );
     },
 
-    date() {
-        return new Promise( ( resolve ) => {
-            const date = new Date();
-            if ( serverDatabase.year ) {
-                date.setYear( serverDatabase.year );
-            }
-            resolve( String( date ) );
-        } );
-    },
+/**
+ *    date() {
+ *        return new Promise( ( resolve ) => {
+ *            const date = new Date();
+ *            if ( serverDatabase.year ) {
+ *                date.setYear( serverDatabase.year );
+ *            }
+ *            resolve( String( date ) );
+ *        } );
+ *    },
+ */
 
 /**
  *    echo( args ) {
@@ -446,52 +450,59 @@ system = {
         } );
     },
 
-    ping( args ) {
-        return new Promise( ( resolve, reject ) => {
-            if ( args === "" ) {
-                reject( new AddressIsEmptyError() );
-                return;
-            }
+/**
+ *    ping( args ) {
+ *        return new Promise( ( resolve, reject ) => {
+ *            if ( args === "" ) {
+ *               reject( new AddressIsEmptyError() );
+ *                return;
+ *            }
+ *
+ *            $.get( `config/network/${ args }/manifest.json`, ( serverInfo ) => {
+ *                resolve( `El servidor ${ serverInfo.serverAddress } (${ serverInfo.serverName }) no se puede acceder` );
+ *            } )
+ *                .fail( () => reject( new AddressNotFoundError( args ) ) );
+ *        } );
+ *    },
+ */
 
-            $.get( `config/network/${ args }/manifest.json`, ( serverInfo ) => {
-                resolve( `El servidor ${ serverInfo.serverAddress } (${ serverInfo.serverName }) no se puede acceder` );
-            } )
-                .fail( () => reject( new AddressNotFoundError( args ) ) );
-        } );
-    },
+/**
+ *    telnet() {
+ *        return new Promise( ( _, reject ) => {
+ *            reject( new Error( "telnet es inseguro y esta obsoleto - usa ssh en su lugar" ) );
+ *        } );
+ *    },
+ */
 
-    telnet() {
-        return new Promise( ( _, reject ) => {
-            reject( new Error( "telnet es inseguro y esta obsoleto - usa ssh en su lugar" ) );
-        } );
-    },
+/**
+ *    ssh( args ) {
+ *        return new Promise( ( resolve, reject ) => {
+ *            if ( args === "" ) {
+ *                reject( new AddressIsEmptyError() );
+ *                return;
+ *            }
+ *            let userName = "";
+ *            let passwd = "";
+ *            let serverAddress = args[ 0 ];
+ *            if ( serverAddress.includes( "@" ) ) {
+ *                const splitted = serverAddress.split( "@" );
+ *                if ( splitted.length !== 2 ) {
+ *                    reject( new InvalidCommandParameter( "ssh" ) );
+ *                    return;
+ *                }
+ *                serverAddress = splitted[ 1 ];
+ *                try {
+ *                    [ userName, passwd ] = userPasswordFrom( splitted[ 0 ] );
+ *                } catch ( error ) {
+ *                    reject( error );
+ *                    return;
+ *                }
+ *            }
+ *            kernel.connectToServer( serverAddress, userName, passwd ).then( resolve ).catch( reject );
+ *        } );
+ *    }
+ */
 
-    ssh( args ) {
-        return new Promise( ( resolve, reject ) => {
-            if ( args === "" ) {
-                reject( new AddressIsEmptyError() );
-                return;
-            }
-            let userName = "";
-            let passwd = "";
-            let serverAddress = args[ 0 ];
-            if ( serverAddress.includes( "@" ) ) {
-                const splitted = serverAddress.split( "@" );
-                if ( splitted.length !== 2 ) {
-                    reject( new InvalidCommandParameter( "ssh" ) );
-                    return;
-                }
-                serverAddress = splitted[ 1 ];
-                try {
-                    [ userName, passwd ] = userPasswordFrom( splitted[ 0 ] );
-                } catch ( error ) {
-                    reject( error );
-                    return;
-                }
-            }
-            kernel.connectToServer( serverAddress, userName, passwd ).then( resolve ).catch( reject );
-        } );
-    }
 };
 
 function userPasswordFrom( creds ) {
