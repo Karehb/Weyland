@@ -27,22 +27,22 @@ function identify() {
     } };
 }
 
-function artifact(args) {
+function camara(args) {
     if (args.length === 0) {
         return [
-            "<p>An ID must be provided: <code>artifact $id</code></p>",
-            `You currently have access to the following artifacts: ${Object.keys(DWEETS).join(" ")}`
+            "<p>An ID must be provided: <code>camara $id</code></p>",
+            `You currently have access to the following cameras: ${Object.keys(CAMERAS).join(" ")}`
         ];
     }
-    const artifactId = args[0];
-    const artifactDweet = DWEETS[artifactId];
-    if (!artifactDweet) {
-        return `You do not have access to the artifact with ID ${artifactId}`;
+    const camaraId = args[0];
+    const camaraDweet = CAMERAS[camaraId];
+    if (!camaraDweet) {
+        return `You do not have access to the camera with ID ${camaraId}`;
     }
-    return artifactDweet();
+    return camaraDweet();
 }
 
-const DWEETS = {
+const CAMERAS = {
     888: function() {
         return "<p>CAMARA DE SEGURIDAD 10534</p><img src='config/colonia_blue.jpg' class='glitch'>";
     },
