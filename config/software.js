@@ -41,6 +41,11 @@ function artifact( args ) {
 
 const DWEETS = {
     888: () => dweet( ( t, x ) => { // FROM: https://www.dwitter.net/d/888
+        for ( let i = 0; i < 300; i++ ) {
+            for ( let j = 0; j < 6; j++ ) {
+                x.fillRect( 100 + 66 * C( i ) * S( T( t / 1.1 ) + j / i ), 100 + 66 * S( i ), 2, 2 );
+            }
+        }
     } ),
     1829: () => dweet( ( t, x ) => { // FROM: https://www.dwitter.net/d/1829
         for ( let i = 16; i--; ) {
