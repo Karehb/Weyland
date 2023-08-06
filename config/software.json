@@ -29,7 +29,7 @@
         "location": ["127.0.0.1", "localhost"],
         "message": [
 	    "<p class=desync>MAPA DE HADLEY'S HOPE</p>",
-            "<img src=colonia.jpg style=\"width: 10rem; max-width: 100%;\">"
+            "<img src=config/colonia.jpg style='width: 10rem' class=glitch>"
         ]
     },
     "artifact": {},
