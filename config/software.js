@@ -65,7 +65,8 @@ const DWEETS = {
         }
     } ),
     10534: () => {
-	return "<p>CAMARA DE SEGURIDAD 10534</p>, <img src=config/colonia_blue.jpg class=glitch>";		
+	return "<p>CAMARA DE SEGURIDAD 10534</p>"
+		<img src=config/colonia_blue.jpg class=glitch>;		
     },
     5600: () => dweet( ( t, x, c ) => { // FROM: https://www.dwitter.net/d/5600
         const h = c.width;
