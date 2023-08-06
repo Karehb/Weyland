@@ -65,6 +65,7 @@ const DWEETS = {
         }
     } ),
     10534: () => dweet( ( t, x ) => { // FROM: https://www.dwitter.net/d/10534
+	return "<p>Some encrypted text must be provided: <code>decrypt 53CR3T T3XT</code></p>";
         t += 160;
         let n;
         for ( let i = 2e3; i--; ) {
