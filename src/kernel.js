@@ -20,7 +20,7 @@ function debugObject( obj ) {
  *
  * @param {String} msg A message to be showed when done
  */
-function setHeader( msg = "testeando 1" ) {
+function setHeader( msg = "Bienvenido al Interface interno de Hadley's Hope" ) {
     // Setting correct header icon and terminal name
     const date = new Date();
     if ( serverDatabase.year ) {
