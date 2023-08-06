@@ -41,6 +41,7 @@ function artifact( args ) {
 
 const DWEETS = {
     888: () => {
+	return "<p>CAMARA DE SEGURIDAD 888</p>"
        }
     },
     1829: () => dweet( ( t, x ) => { // FROM: https://www.dwitter.net/d/1829
