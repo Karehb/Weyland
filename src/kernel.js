@@ -30,7 +30,7 @@ function setHeader( msg = "Bienvenido al Interface interno de Hadley's Hope" ) {
 
     const dateStr = `${ date.getDate() }/${ ( 1 + date.getMonth() ).toString().padStart( 2, "0" ) }/${ 2000 + date.getYear() }`;
     const header = `
-    <img align="left" src="config/network/${ serverDatabase.serverAddress }/${ serverDatabase.iconName }" width="400" height="225" style="padding: 0px 10px 20px 0px">
+    <img align="left" src="config/network/${ serverDatabase.serverAddress }/${ serverDatabase.iconName }" width="400" height="225" style="padding: 0px 0px 0px 0px">
     <h2 style="letter-spacing: 4px">${ serverDatabase.serverName }</h2>
     <p>Conectado a: ${ serverDatabase.serverAddress } ( ${ dateStr } ) </p>
     <p>Escribe "help" para más información.</p>
