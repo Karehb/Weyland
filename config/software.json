@@ -27,11 +27,11 @@
     },
     "mapa": {
         "location": ["127.0.0.1", "localhost"],
-        "help": "Muestra la el mapa de la colonia",
+        "help": "Muestra el mapa de la colonia",
         "clear": true,
         "message": [
-	    "<p>MAPA DE HADLEY'S HOPE</p>",
-            "<img src=config/colonia.jpg style='width: 80%' class=glitch>"
+	    "<p style='font-size: 3em>MAPA DE HADLEY'S HOPE</p>",
+            "<img src=config/colonia_blue.jpg style='width: 80%' align="text-center" class=glitch>"
         ]
     },
     "artifact": {},
