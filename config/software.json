@@ -31,7 +31,7 @@
         "clear": true,
         "message": [
 	    "<p style='font-size: 3em>MAPA DE HADLEY'S HOPE</p>",
-            "<img src=config/colonia_blue.jpg style='width: 80%' class=glitch>"
+            "<img src=config/colonia_blue.jpg style='width: 100%' class=particle data-particules=2000>"
         ]
     },
     "artifact": {},
