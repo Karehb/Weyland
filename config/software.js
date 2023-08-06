@@ -40,10 +40,8 @@ function artifact( args ) {
 }
 
 const DWEETS = {
-    888: () => {
-	return "<p>CAMARA DE SEGURIDAD 888</p>"
-       }
-    },
+    888: () => dweet( ( t, x ) => { // FROM: https://www.dwitter.net/d/888
+    } ),
     1829: () => dweet( ( t, x ) => { // FROM: https://www.dwitter.net/d/1829
         for ( let i = 16; i--; ) {
             x.ellipse( 100 + 60 * S( t + i * 0.1 ), 100 + 10 * C( t + i * 0.1 ), 32 * S( -i * 0.5 ) + 32, 10 * S( i * 0.1 ) + 1, 1.6 + 0.5 * S( t * 0.5 ), 9.5, 0, true );
