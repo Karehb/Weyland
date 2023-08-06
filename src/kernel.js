@@ -33,7 +33,7 @@ function setHeader( msg = " " ) {
     <img align="left" src="config/network/${ serverDatabase.serverAddress }/${ serverDatabase.iconName }" width="400" height="225" style="padding: 0px 0px 0px 0px">
     <h1 style="letter-spacing: 4px">${ serverDatabase.serverName }</h1>
     <p>Conectado a: ${ serverDatabase.serverAddress } ( ${ dateStr } ) </p>
-    <p>ALERTA situación excepcional activada.</p>
+    <p class='glow'>ALERTA situación excepcional activada.</p>
     <p>Escribe "help" para más información.</p>
     `;
     // Clear content:
