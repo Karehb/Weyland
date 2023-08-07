@@ -15,10 +15,16 @@ function camara(args) {
 
 const CAMERAS = {
     888: function() {
-        return "<p>CAMARA DE SEGURIDAD 888</p><img src='config/colonia_blue.jpg' class='glitch'>";
+        return "<p>Video CAM-888</p><img src='config/cam1.jpg' class='glitch'>";
     },
     10549: function() {
-        return "<p>CAMARA DE SEGURIDAD 10549</p><img src='config/colonia_blue.jpg' class='glitch'>";
+        return "<p>Video CAM-10549</p><img src='config/cam2.jpg' class='glitch'>";
+    },
+    4800: function() {
+        return "<p>Video CAM-4800</p><img src='config/cam3.jpg' class='glitch'>";
+    },
+    34: function() {
+        return "<p>Video CAM-34</p><img src='config/cam4.jpg' class='glitch'>";
     },
 }
 
