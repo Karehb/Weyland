@@ -15,34 +15,34 @@ function camara(args) {
 
 const CAMERAS = {
     34: function() {
-        return "<p>Video CAM-34</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 9000 10218 46035 46038</p><img src='config/cam1.jpg' class='glitch'>";
+        return "<p>Video CAM-34</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam1.jpg' class='glitch'>";
     },
     156: function() {
-        return "<p>Video CAM-156</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 9000 10218 46035 46038</p><img src='config/cam2.jpg' class='glitch'>";
+        return "<p>Video CAM-156</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam2.jpg' class='glitch'>";
     },
     888: function() {
-        return "<p>Video CAM-888</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 9000 10218 46035 46038</p><img src='config/cam3.jpg' class='glitch'>";
+        return "<p>Video CAM-888</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam3.jpg' class='glitch'>";
     },
     1059: function() {
-        return "<p>Video CAM-1059</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 9000 10218 46035 46038</p><img src='config/cam5.jpg' class='glitch'>";
+        return "<p>Video CAM-1059</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam5.jpg' class='glitch'>";
     },
     3660: function() {
-        return "<p>Video CAM-3660</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 9000 10218 46035 46038</p><img src='config/cam6.jpg' class='glitch'>";
+        return "<p>Video CAM-3660</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam6.jpg' class='glitch'>";
     },
     5112: function() {
-        return "<p>Malfuncionamiento detectado</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 9000 10218 46035 46038</p><img src='config/camBroken.jpg' class='glitch'>";
+        return "<p>Malfuncionamiento detectado</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/camBroken.jpg' class='glitch'>";
     },
-    "8668_Lab": function() {
-        return "<p>Video CAM-8668_Lab</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 9000 10218 46035 46038</p><img src='config/cam8.jpg' class='glitch'>";
+    "G11_Lab": function() {
+        return "<p>Video G11_Lab</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam8.jpg' class='glitch'>";
     },
     10218: function() {
-        return "<p>Video CAM-10218</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 9000 10218 46035 46038</p><img src='config/cam7.jpg' class='glitch'>";
+        return "<p>Video CAM-10218</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam7.jpg' class='glitch'>";
     },
     46035: function() {
-        return "<p>Video CAM-46035</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 9000 10218 46035 46038</p><img src='config/cam9.jpg' class='glitch'>";
+        return "<p>Video CAM-46035</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam9.jpg' class='glitch'>";
     },
     46038: function() {
-        return "<p>Video CAM-46038</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 9000 10218 46035 46038</p><img src='config/cam10.jpg' class='glitch'>";
+        return "<p>Video CAM-46038</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam10.jpg' class='glitch'>";
     },
     "XXXX": function() {
         return "<p>Imagen Desconocida</p><p>Fallo critico en la transmisión</p><img src='config/cam4.jpg' class='glitch'>";
