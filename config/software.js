@@ -42,9 +42,15 @@ function puerta(args) {
 
 const PUERTAS = {
   1: function() {
-    return "<p>PUERTA 1</p><img src='config/door1.jpg' class='glitch'>";
+    return "<p>PUERTA 1 BLOQUEADA</p>";
   },
   2: function() {
-    return "<p>PUERTA 2</p><img src='config/door2.jpg' class='glitch'>";
+    return "<p>PUERTA 2 BLOQUEADA</p>";
+  },
+  3: function() {
+    return "<p>PUERTA 3 BLOQUEADA</p>";
+  },
+  4: function() {
+    return "<p>PUERTA 4 BLOQUEADA</p>";
   },
 };
