@@ -1,5 +1,5 @@
 function camara(args) {
-    if (args.length === 0) {
+    if (args.length === 0 || typeof args[0] !== "number") {
         return [
             "<p>An ID must be provided: <code>camara $id</code></p>",
             `You currently have access to the following cameras: ${Object.keys(CAMERAS).join(" ")}`
