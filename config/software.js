@@ -9,23 +9,25 @@
  */
 /* eslint-disable no-inner-declarations, no-nested-ternary, no-sequences, no-unused-vars */
 
-function decrypt( args ) { // The same function can be used to encode text
-    if ( args.length === 0 ) {
-        return "<p>Some encrypted text must be provided: <code>decrypt 53CR3T T3XT</code></p>";
-    }
-    const textInClear = rot13( args.join( " " ) );
-    return `<p class="hack-reveal">${ textInClear }</p>`;
-}
-function rot13( s ) { // cf. https://en.wikipedia.org/wiki/ROT13
-    return s.replace( /[a-zA-Z]/g, ( c ) => String.fromCharCode( ( c <= "Z" ? 90 : 122 ) >= ( c = c.charCodeAt( 0 ) + 13 ) ? c : c - 26 ) );
-}
+/** function decrypt( args ) { // The same function can be used to encode text
+ *    if ( args.length === 0 ) {
+ *        return "<p>Some encrypted text must be provided: <code>decrypt 53CR3T T3XT</code></p>";
+ *    }
+ *    const textInClear = rot13( args.join( " " ) );
+ *    return `<p class="hack-reveal">${ textInClear }</p>`;
+ * }
+ * function rot13( s ) { // cf. https://en.wikipedia.org/wiki/ROT13
+ *    return s.replace( /[a-zA-Z]/g, ( c ) => String.fromCharCode( ( c <= "Z" ? 90 : 122 ) >= ( c = c.charCodeAt( 0 ) + 13 ) ? c : c - 26 ) );
+ *}
+ */
 
-function identify() {
-    const introMsg = [ "What is this?", `<img src="https://thisartworkdoesnotexist.com/?${ performance.now() }" style="width: 10rem; max-width: 100%;">` ];
-    return { message: introMsg, onInput( answer ) {
-        return `Wrong! This is not "${ answer }"`;
-    } };
-}
+/** function identify() {
+ *    const introMsg = [ "What is this?", `<img src="https://thisartworkdoesnotexist.com/?${ performance.now() }" style="width: 10rem; max-width: 100%;">` ];
+ *    return { message: introMsg, onInput( answer ) {
+ *        return `Wrong! This is not "${ answer }"`;
+ *    } };
+ *}
+ */
 
 function camara(args) {
     if (args.length === 0) {
@@ -44,6 +46,9 @@ function camara(args) {
 
 const CAMERAS = {
     888: function() {
-        return "<p>CAMARA DE SEGURIDAD 10534</p><img src='config/colonia_blue.jpg' class='glitch'>";
+        return "<p>CAMARA DE SEGURIDAD 888</p><img src='config/colonia_blue.jpg' class='glitch'>";
+    },
+    10549: function() {
+        return "<p>CAMARA DE SEGURIDAD 10549</p><img src='config/colonia_blue.jpg' class='glitch'>";
     },
 };
