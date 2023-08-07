@@ -32,7 +32,7 @@ const CAMERAS = {
     8556: function() {
         return "<p>Video CAM-8556</p><p>Camara IDs: 34 156 888 1059 3660 8556 9000 10218 46035 46038</p><img src='config/cam8.jpg' class='glitch'>";
     },
-    9000: function() {
+    "XXXX": function() {
         return "<p>Video Desconocido</p><p>Camara IDs: 34 156 888 1059 3660 8556 9000 10218 46035 46038</p><img src='config/cam4.jpg' class='glitch'>";
     },
     10218: function() {
