@@ -22,41 +22,43 @@ const CAMERAS = {
     },
 };
 
-function puerta() {
-    const puertas = ["puerta1", "puerta2", "puerta3", "puerta4"];
+function puerta(args) {
+    if (args.length === 0 || typeof args[0] !== "number") {
+        return [
+            "<p>An ID must be provided: <code>puerta $id</code></p>",
+            `You currently have access to the following doors: ${Object.keys(PUERTAS).join(", ")}`
+        ];
+    }
+    const puertaId = args[0];
+    const puertaAction = args[1];
 
-    console.log("Lista de IDs de puertas:");
-    console.log(puertas.join(", "));
+    const puertaDweet = PUERTAS[puertaId];
+    if (!puertaDweet) {
+        return `You do not have access to the door with ID ${puertaId}`;
+    }
 
-    const readline = require("readline").createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
-
-    readline.question("Ingresa el ID de la puerta que deseas bloquear o desbloquear: ", puertaId => {
-        if (!puertas.includes(puertaId)) {
-            console.log("ID de puerta inválido");
-            readline.close();
-            return;
-        }
-
-        readline.question("¿Quieres bloquear o desbloquear la puerta? (bloquear/desbloquear): ", opcion => {
-            if (opcion !== "bloquear" && opcion !== "desbloquear") {
-                console.log("Opción inválida");
-                readline.close();
-                return;
-            }
-
-            readline.question("Ingresa la contraseña: ", contraseña => {
-                if (contraseña === "tu_contraseña_comun") {
-                    const estado = opcion === "bloquear" ? "bloqueada" : "desbloqueada";
-                    console.log(`ID ${puertaId} ${estado}`);
-                } else {
-                    console.log("Contraseña incorrecta, acceso denegado");
-                }
-
-                readline.close();
-            });
-        });
-    });
+    if (PUERTAS[puertaId].hasOwnProperty(puertaAction)) {
+        return PUERTAS[puertaId][puertaAction];
+    } else {
+        return `Invalid action for door with ID ${puertaId}. Please specify a valid action.`;
+    }
 }
+
+const PUERTAS = {
+    lab: {
+        bloquear: "ID lab bloqueada",
+        desbloquear: "ID lab desbloqueada",
+        contenido: "<p>PUERTA lab</p>"
+    },
+    exit: {
+        bloquear: "ID exit bloqueada",
+        desbloquear: "ID exit desbloqueada",
+        contenido: "<p>PUERTA exit</p>"
+    },
+    // Agrega más IDs y sus contenidos aquí:
+    10550: {
+        bloquear: "ID 10550 bloqueada",
+        desbloquear: "ID 10550 desbloqueada",
+        contenido: "<p>PUERTA 10550</p>"
+    },
+};
