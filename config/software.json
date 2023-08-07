@@ -22,6 +22,10 @@
             "<img src='config/colonia_blue.jpg' style='width: 100%' class='glitch'>"
         ]
     },
-    "camara": {},
-    "puerta": {}
+    "camara": {
+        "help": "Muestra las camaras de la colonia"
+},
+    "puerta": {
+        "help": "Bloqueo de puertas"
+}
 }
