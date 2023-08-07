@@ -1,14 +1,3 @@
-/*
- This file contains the logic for custom software programs
- that perform more complex actions than just displaying some text or HTML.
-
- You are invited to edit this file to define your own commands!
- Start by removing the demo ones that you don't need for your game.
-
- Remember that function names must match the names of the programs in software.json.
- */
-/* eslint-disable no-inner-declarations, no-nested-ternary, no-sequences, no-unused-vars */
-
 function camara(args) {
     if (args.length === 0) {
         return [
@@ -32,3 +21,42 @@ const CAMERAS = {
         return "<p>CAMARA DE SEGURIDAD 10549</p><img src='config/colonia_blue.jpg' class='glitch'>";
     },
 };
+
+function puerta() {
+    const puertas = ["puerta1", "puerta2", "puerta3", "puerta4"];
+
+    console.log("Lista de IDs de puertas:");
+    console.log(puertas.join(", "));
+
+    const readline = require("readline").createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    readline.question("Ingresa el ID de la puerta que deseas bloquear o desbloquear: ", puertaId => {
+        if (!puertas.includes(puertaId)) {
+            console.log("ID de puerta inválido");
+            readline.close();
+            return;
+        }
+
+        readline.question("¿Quieres bloquear o desbloquear la puerta? (bloquear/desbloquear): ", opcion => {
+            if (opcion !== "bloquear" && opcion !== "desbloquear") {
+                console.log("Opción inválida");
+                readline.close();
+                return;
+            }
+
+            readline.question("Ingresa la contraseña: ", contraseña => {
+                if (contraseña === "tu_contraseña_comun") {
+                    const estado = opcion === "bloquear" ? "bloqueada" : "desbloqueada";
+                    console.log(`ID ${puertaId} ${estado}`);
+                } else {
+                    console.log("Contraseña incorrecta, acceso denegado");
+                }
+
+                readline.close();
+            });
+        });
+    });
+}
