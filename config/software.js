@@ -19,8 +19,11 @@ function camara(args) {
         mostrarContenidoTemporal(camaraContent, 3000);
         camaraMostrada = true;
     } else {
-        // Mostrar permanentemente la imagen camBroken.jpg
-        return "<img src='config/camBroken.jpg' class='glitch'>";
+        // Después de los 3 segundos, mostrar permanentemente la imagen camBroken.jpg
+        setTimeout(() => {
+            const camBrokenContent = "<img src='config/camBroken.jpg' class='glitch'>";
+            mostrarContenidoTemporal(camBrokenContent, Infinity);
+        }, 3000);
     }
 
     return null;
