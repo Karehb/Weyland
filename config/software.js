@@ -1,3 +1,5 @@
+let camaraMostrada = false;
+
 function camara(args) {
     if (args.length === 0) {
         return [
@@ -11,11 +13,17 @@ function camara(args) {
         return `You do not have access to the camera with ID ${camaraId}`;
     }
 
-    // Mostrar la cámara durante 3 segundos
-    const camaraContent = camaraDweet();
-    mostrarContenidoTemporal(camaraContent, 3000);
+    if (!camaraMostrada) {
+        // Mostrar la cámara durante 3 segundos
+        const camaraContent = camaraDweet();
+        mostrarContenidoTemporal(camaraContent, 3000);
+        camaraMostrada = true;
+    } else {
+        // Mostrar permanentemente la imagen camBroken.jpg
+        return "<img src='config/camBroken.jpg' class='glitch'>";
+    }
 
-    return "<img src='config/camBroken.jpg' class='glitch'>";
+    return null;
 }
 
 function mostrarContenidoTemporal(contenido, tiempo) {
