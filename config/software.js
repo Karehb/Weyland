@@ -15,7 +15,7 @@ function camara(args) {
     const camaraContent = camaraDweet();
     mostrarContenidoTemporal(camaraContent, 3000);
 
-    return null; // Opcionalmente, puedes retornar algo más útil aquí, o simplemente null.
+    return "<img src='config/camBroken.jpg' class='glitch'>";
 }
 
 function mostrarContenidoTemporal(contenido, tiempo) {
