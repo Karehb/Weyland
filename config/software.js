@@ -1,5 +1,3 @@
-let camaraMostrada = false;
-
 function camara(args) {
     if (args.length === 0) {
         return [
@@ -12,50 +10,39 @@ function camara(args) {
     if (!camaraDweet) {
         return `You do not have access to the camera with ID ${camaraId}`;
     }
-
-    if (!camaraMostrada) {
-        // Mostrar la cámara durante 3 segundos
-        const camaraContent = camaraDweet();
-        mostrarContenidoTemporal(camaraContent, 3000);
-        camaraMostrada = true;
-    } else {
-        // Después de los 3 segundos, mostrar permanentemente la imagen camBroken.jpg
-        setTimeout(() => {
-            const camBrokenContent = "<img src='config/camBroken.jpg' class='glitch'>";
-            mostrarContenidoTemporal(camBrokenContent, Infinity);
-        }, 3000);
-    }
-
-    return null;
-}
-
-function mostrarContenidoTemporal(contenido, tiempo) {
-    // Obtener el contenedor donde se mostrará el contenido temporalmente
-    const temporalContainer = document.createElement('div');
-    temporalContainer.innerHTML = contenido;
-
-    // Agregar el contenedor temporal al cuerpo del documento
-    document.body.appendChild(temporalContainer);
-
-    // Después de 'tiempo' milisegundos, borrar el contenido del contenedor y eliminarlo del documento
-    setTimeout(() => {
-        temporalContainer.innerHTML = '';
-        document.body.removeChild(temporalContainer);
-    }, tiempo);
+    return camaraDweet();
 }
 
 const CAMERAS = {
     34: function() {
         return "<p>Video CAM-34</p><img src='config/cam1.jpg' class='glitch'>";
     },
+    156: function() {
+        return "<p>Video CAM-156</p><img src='config/cam2.jpg' class='glitch'>";
+    },
     888: function() {
-        return "<p>Video CAM-888</p><img src='config/cam2.jpg' class='glitch'>";
+        return "<p>Video CAM-888</p><img src='config/cam3.jpg' class='glitch'>";
     },
-    4800: function() {
-        return "<p>Video CAM-4800</p><img src='config/cam3.jpg' class='glitch'>";
+    1059: function() {
+        return "<p>Video CAM-1059</p><img src='config/cam5.jpg' class='glitch'>";
     },
-    10549: function() {
-        return "<p>Video CAM-10549</p><img src='config/cam4.jpg' class='glitch'>";
+    3660: function() {
+        return "<p>Video CAM-3660</p><img src='config/cam6.jpg' class='glitch'>";
+    },
+    22-A: function() {
+        return "<p>Video CAM-22-A</p><img src='config/cam8.jpg' class='glitch'>";
+    },
+    XXXX: function() {
+        return "<p>Video Desconocido</p><img src='config/cam4.jpg' class='glitch'>";
+    },
+    10218: function() {
+        return "<p>Video CAM-10218</p><img src='config/cam7.jpg' class='glitch'>";
+    },
+    46035: function() {
+        return "<p>Video CAM-46035</p><img src='config/cam9.jpg' class='glitch'>";
+    },
+    46038: function() {
+        return "<p>Video CAM-46038</p><img src='config/cam10.jpg' class='glitch'>";
     },
 }
 
