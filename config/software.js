@@ -1,14 +1,14 @@
 function camara(args) {
     if (args.length === 0) {
         return [
-            "<p>An ID must be provided: <code>camara $id</code></p>",
-            `You currently have access to the following cameras: ${Object.keys(CAMERAS).join(" ")}`
+            "<p>Se necesita una ID valida: <code>camara $id</code></p>",
+            `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`
         ];
     }
     const camaraId = args[0];
     const camaraDweet = CAMERAS[camaraId];
     if (!camaraDweet) {
-        return `You do not have access to the camera with ID ${camaraId}`;
+        return `No tienes acceso a la camara con la ID ${camaraId}`;
     }
     return camaraDweet();
 }
@@ -29,10 +29,10 @@ const CAMERAS = {
     3660: function() {
         return "<p>Video CAM-3660</p><img src='config/cam6.jpg' class='glitch'>";
     },
-    22-A: function() {
-        return "<p>Video CAM-22-A</p><img src='config/cam8.jpg' class='glitch'>";
+    8556: function() {
+        return "<p>Video CAM-8556</p><img src='config/cam8.jpg' class='glitch'>";
     },
-    XXXX: function() {
+    9000: function() {
         return "<p>Video Desconocido</p><img src='config/cam4.jpg' class='glitch'>";
     },
     10218: function() {
