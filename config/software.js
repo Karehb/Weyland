@@ -32,7 +32,7 @@ const CAMERAS = {
     5112: function() {
         return "<p>Malfuncionamiento detectado</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/camBroken.jpg' class='glitch'>";
     },
-    "G11_Lab": function() {
+    "g11_lab": function() {
         return "<p>Video G11_Lab</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam8.jpg' class='glitch'>";
     },
     10218: function() {
@@ -44,27 +44,43 @@ const CAMERAS = {
     46038: function() {
         return "<p>Video CAM-46038</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam10.jpg' class='glitch'>";
     },
-    "XXXX": function() {
+    "xxxx": function() {
         return "<p>Imagen Desconocida</p><p>Fallo critico en la transmisión</p><img src='config/cam4.jpg' class='glitch'>";
     },
 }
 
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
 function puerta(args) {
   if (args.length === 0) {
-    const camerasList = Object.keys(PUERTAS).join("\n");
+    const puertasList = Object.keys(PUERTAS).join("\n");
     return [
-      "<p>An ID must be provided: <code>puerta $id</code></p>",
-      `You currently have access to the following doors:\n${camerasList}`
+      "<p>Debe proporcionar un ID: <code>puerta $id</code></p>",
+      `Actualmente tienes acceso a las siguientes puertas:\n${puertasList}`
     ];
   }
 
   const puertaId = args[0];
   const puertaDweet = PUERTAS[puertaId];
   if (!puertaDweet) {
-    return `You do not have access to the door with ID ${puertaId}`;
+    return `No tienes acceso a la puerta con ID ${puertaId}`;
   }
 
-  return puertaDweet();
+  rl.question(`Escribe "bloquear" para bloquear la puerta ${puertaId} o "desbloquear" para desbloquearla: `, (answer) => {
+    if (answer === 'bloquear') {
+      console.log(`Puerta ${puertaId} bloqueada`);
+    } else if (answer === 'desbloquear') {
+      console.log(`Puerta ${puertaId} desbloqueada`);
+    } else {
+      console.log('Respuesta inválida. No se realizó ninguna acción.');
+    }
+    rl.close();
+  });
 }
 
 const PUERTAS = {
@@ -81,3 +97,6 @@ const PUERTAS = {
     return "<p>PUERTA 4 BLOQUEADA</p>";
   },
 };
+
+// Ejemplo de uso
+puerta([1]); // Llamada a la función con el ID de la puerta
