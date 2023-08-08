@@ -318,40 +318,40 @@ system = {
                     "La tecla TAB auto-completara los comandos."
                 ] );
             } else if ( args[ 0 ] === "clear" ) {
-                resolve( [ "Úso:", "> clear", "El comando clear limpiara la pantalla pero no afectara al historial." ] );
+                resolve( [ "escribe:", "> clear", "función:", "El comando >clear limpiara la pantalla de información pero no afectara al historial de inputs." ] );
             } else if ( args[ 0 ] === "date" ) {
-                resolve( [ "Úso:", "> date", "El comando date imprimira la fecha actual en la terminal." ] );
+                resolve( [ "escribe:", "> date", "función:", "El comando >date imprimira la fecha actual en la terminal." ] );
             } else if ( args[ 0 ] === "echo" ) {
-                resolve( [ "Úso:", "> echo args", "El comando echo imprimira args en la terminal." ] );
+                resolve( [ "escribe:", "> echo args", "función:", "El comando >echo imprimira args en la terminal." ] );
             } else if ( args[ 0 ] === "help" ) {
-                resolve( [ "Úso:", "> help", "El mensaje help por defecto. Mostrara algunos de los comandos disponibles en el servidor." ] );
+                resolve( [ "escribe:", "> help", "función:", "El mensaje 'help' por defecto. Mostrara algunos de los comandos disponibles en el servidor." ] );
             } else if ( args[ 0 ] === "login" ) {
-                resolve( [ "Úso:", "> login usuario:contraseña", "Cambiar de cuenta: conectate como otro usuario registrado en el servidor, para acceder a tus archivos y mensajes." ] );
+                resolve( [ "escribe:", "> login usuario:contraseña", "función:", "El sistema se conectara a una cuenta de usuario, para ejecutar programas o leer mensajes asignados al usuario. Se necesita contraseña" ] );
             } else if ( args[ 0 ] === "mail" ) {
-                resolve( [ "Úso:", "> mail", "Si estas conectado podras ver la lista de mensajes si es que hay alguno." ] );
+                resolve( [ "escribe:", "> mail", "función:", "Muestra el listado de mensajes del usuario conectado, para leerlos usa el comando >read." ] );
             } else if ( args[ 0 ] === "ping" ) {
-                resolve( [ "Úso:", "> ping address", "El comando ping intentara alcanzar una dirección valida.", 
+                resolve( [ "escribe:", "> ping address", "función:", "El comando ping intentara alcanzar una dirección valida.", 
 						     "Si el ping no devuelve una respuesta valida, la dirección podría ser incorrecta, no existir o no ser alcanzable de forma local." ] );
             } else if ( args[ 0 ] === "read" ) {
-                resolve( [ "Úso:", "> read x", "Si estas conectado podras leer tus mensajes si hubiese alguno." ] );
+                resolve( [ "escribe:", "> read x", "función:", "Permite leer los mensajes del usuario usando el número del mail, para comprobar si tienes mails o sus números usa el comando >mail." ] );
             } else if ( args[ 0 ] === "ssh" ) {
                 resolve( [
-                    "Úso:",
+                    "escribe:",
                     "> ssh dirección",
                     "> ssh usuario@dirección",
-                    "> ssh usuario:contraseña@dirección",
+                    "> ssh usuario:contraseña@dirección", "función:",
                     "Puedes conectarte a una dirección valida para acceder a un servidor especifico de internet.",
                     "Podrias necesitar especificar un usuario si el servidor no tiene un usuario por defecto.",
                     "Podrias necesitar especificar una contraseña si la cuenta de usuario esta protegida." ] );
             } else if ( args[ 0 ] === "whoami" ) {
-                resolve( [ "Úso:", "> whoami", "Muestra el servidor al que estas actualmente conectado y el login con el que estas registrado." ] );
+                resolve( [ "escribe:", "> whoami", "función:", "Muestra el servidor al que estas actualmente conectado y el login con el que estas registrado." ] );
             } else if ( args[ 0 ] in softwareInfo ) {
                 const customProgram = programs[ args[ 0 ] ];
                 if ( customProgram.help ) {
-                    resolve( [ "Úso:", `> ${ args[ 0 ] }`, customProgram.help ] );
+                    resolve( [ "escribe:", `> ${ args[ 0 ] }`, "función:", customProgram.help ] );
                 }
             } else if ( args[ 0 ] in system && args[ 0 ] !== "dumpdb" ) {
-                console.error( `No se ha encontrado help para el comando de sistema: ${ args[ 0 ] }` );
+                console.error( `No se ha encontrado ayuda para el comando de sistema: ${ args[ 0 ] }` );
             } else {
                 resolve( [ `Comando desconocido ${ args[ 0 ] }` ] );
             }
