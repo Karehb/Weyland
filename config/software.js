@@ -1,9 +1,17 @@
-const readline = require('readline');
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+function camara(args) {
+    if (args.length === 0) {
+        return [
+            "<p>Se necesita una ID valida: <code>camara $id</code></p>",
+            `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`
+        ];
+    }
+    const camaraId = args[0];
+    const camaraDweet = CAMERAS[camaraId];
+    if (!camaraDweet) {
+        return `No tienes acceso a la camara con la ID ${camaraId}`;
+    }
+    return camaraDweet();
+}
 
 const CAMERAS = {
     34: function() {
@@ -38,7 +46,26 @@ const CAMERAS = {
     },
     "xxxx": function() {
         return "<p>Imagen Desconocida</p><p>Fallo critico en la transmisión</p><img src='config/cam4.jpg' class='glitch'>";
-};
+    },
+}
+
+function puerta(args) {
+  if (args.length === 0) {
+    const camerasList = Object.keys(PUERTAS).join("\n");
+    return [
+      "<p>An ID must be provided: <code>puerta $id</code></p>",
+      `You currently have access to the following doors:\n${camerasList}`
+    ];
+  }
+
+  const puertaId = args[0];
+  const puertaDweet = PUERTAS[puertaId];
+  if (!puertaDweet) {
+    return `You do not have access to the door with ID ${puertaId}`;
+  }
+
+  return puertaDweet();
+}
 
 const PUERTAS = {
   1: function() {
@@ -54,49 +81,3 @@ const PUERTAS = {
     return "<p>PUERTA 4 BLOQUEADA</p>";
   },
 };
-
-function camara(args) {
-    if (args.length === 0) {
-        return [
-            "<p>Se necesita una ID válida: <code>camara $id</code></p>",
-            `Tienes acceso a las siguientes cámaras: ${Object.keys(CAMERAS).join(" ")}`
-        ];
-    }
-    const camaraId = args[0];
-    const camaraDweet = CAMERAS[camaraId];
-    if (!camaraDweet) {
-        return `No tienes acceso a la cámara con la ID ${camaraId}`;
-    }
-    return camaraDweet();
-}
-
-function puerta(args) {
-    if (args.length === 0) {
-        const puertasList = Object.keys(PUERTAS).join("\n");
-        return [
-            "<p>Debe proporcionar un ID: <code>puerta $id</code></p>",
-            `Actualmente tienes acceso a las siguientes puertas:\n${puertasList}`
-        ];
-    }
-
-    const puertaId = args[0];
-    const puertaDweet = PUERTAS[puertaId];
-    if (!puertaDweet) {
-        return `No tienes acceso a la puerta con ID ${puertaId}`;
-    }
-
-    rl.question(`Escribe "bloquear" para bloquear la puerta ${puertaId} o "desbloquear" para desbloquearla: `, (answer) => {
-        if (answer === 'bloquear') {
-            console.log(`Puerta ${puertaId} bloqueada`);
-        } else if (answer === 'desbloquear') {
-            console.log(`Puerta ${puertaId} desbloqueada`);
-        } else {
-            console.log('Respuesta inválida. No se realizó ninguna acción.');
-        }
-        rl.close();
-    });
-}
-
-// Ejemplo de uso
-camara([34]); // Llamada a la función camara con el ID de la cámara
-puerta([1]); // Llamada a la función puerta con el ID de la puerta
