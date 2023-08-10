@@ -18,12 +18,12 @@ function camara(args) {
 
 const CAMERAS = {
     34: function() {
-        return [
-            "<p class='shimmer' 3em>Video CAM-34</p>",
-            `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/cam1.jpg' onload="window.scrollTo( 0, getDocHeight_() )" class='glitch'>"
-        ];
-    },
+    return [
+        "<p class='shimmer' 3em>Video CAM-34</p>",
+        `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
+        `<img src='config/cam1.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
+    	   ];
+	},
     156: function() {
         return [
             "<p class='shimmer' 2em>Video CAM-156</p>",
