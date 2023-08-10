@@ -8,8 +8,10 @@ function camara(args) {
     const camaraId = args[0];
     const camaraDweet = CAMERAS[camaraId];
     if (!camaraDweet) {
-        return `No tienes acceso a la camara con la ID ${camaraId}`,
-	`Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`;
+        return [
+            `No tienes acceso a la camara con la ID ${camaraId}`,
+            `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`
+        ];
     }
     return camaraDweet();
 }
