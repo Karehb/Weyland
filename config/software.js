@@ -28,70 +28,70 @@ const CAMERAS = {
         return [
             "<p class='shimmer' 2em>Video CAM-156</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/cam2.jpg' class='glitch'>"
+            `<img src='config/cam2.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
         ];
     },
     888: function() {
         return [
             "<p class='shimmer' 2em>Video CAM-888</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/cam3.jpg' class='glitch'>"
+            `<img src='config/cam3.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
         ];
     },
     1059: function() {
         return [
             "<p class='shimmer' 2em>Video CAM-1059</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/cam5.jpg' class='glitch'>"
+            `<img src='config/cam5.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
         ];
     },
     3660: function() {
         return [
             "<p class='shimmer' 2em>Video CAM-3660</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/cam6.jpg' class='glitch'>"
+            `<img src='config/cam6.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
         ];
     },
     5112: function() {
         return [
             "<p class='shimmer' 2em>Video CAM-5112</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/camBroken.jpg' class='glitch'>"
+            `<img src='config/camBroken.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
         ];
     },
     "g11_lab": function() {
         return [
             "<p class='shimmer' 2em>Video g11_lab</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/cam8.jpg' class='glitch'>"
+            `<img src='config/cam8.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
         ];
     },
     10218: function() {
         return [
             "<p class='shimmer' 2em>Video CAM-10218</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/cam7.jpg' class='glitch'>"
+            `<img src='config/cam7.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
         ];
     },
     46035: function() {
         return [
             "<p class='shimmer' 2em>Video CAM-46035</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/cam9.jpg' class='glitch'>"
+            `<img src='config/cam9.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
         ];
     },
     46038: function() {
         return [
             "<p class='shimmer' 2em>Video CAM-46038</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/cam10.jpg' class='glitch'>"
+            `<img src='config/cam10.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
         ];
     },
     "xxxx": function() {
         return [
             "<p class='shimmer' 2em>Imagen Desconocida</p>",
             "<p class='glow'>Fallo critico en la transmisión</p>",
-            "<img src='config/cam4.jpg' class='glitch'>"
+            `<img src='config/cam4.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>`
         ];
     },
 }
