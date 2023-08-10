@@ -1,14 +1,15 @@
 function camara(args) {
     if (args.length === 0) {
         return [
-            "<p>Se necesita una ID valida: <code>camara $id</code></p>",
+            "<p>Se necesita una ID valida: <code>camara id</code></p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`
         ];
     }
     const camaraId = args[0];
     const camaraDweet = CAMERAS[camaraId];
     if (!camaraDweet) {
-        return `No tienes acceso a la camara con la ID ${camaraId}`;
+        return `No tienes acceso a la camara con la ID ${camaraId}`,
+	`Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`;
     }
     return camaraDweet();
 }
