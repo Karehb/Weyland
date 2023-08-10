@@ -19,16 +19,16 @@ function camara(args) {
 const CAMERAS = {
     34: function() {
         return [
-            "<p>Video CAM-34</p>",
+            "<p class='hack-reveal'>Video CAM-34</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
             "<img src='config/cam1.jpg' class='glitch'>"
         ];
     },
     156: function() {
-        return "<p>Video CAM-156</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam2.jpg' class='glitch'>";
+        return "<p class='desync'>Video CAM-156</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam2.jpg' class='glitch'>";
     },
     888: function() {
-        return "<p>Video CAM-888</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam3.jpg' class='glitch'>";
+        return "<p class='shimmer'>Video CAM-888</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam3.jpg' class='glitch'>";
     },
     1059: function() {
         return "<p>Video CAM-1059</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam5.jpg' class='glitch'>";
