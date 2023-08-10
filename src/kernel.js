@@ -52,6 +52,7 @@ function setHeader( msg = " " ) {
  * This function is necessary to auto-scroll to the end of page after each terminal command.
  */
 function getDocHeight_() {
+	return 99999;
     const doc = document;
     const body = doc.body;
     const html = doc.documentElement;
