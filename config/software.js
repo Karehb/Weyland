@@ -18,7 +18,10 @@ function camara(args) {
 
 const CAMERAS = {
     34: function() {
-        return "<p>Video CAM-34</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam1.jpg' class='glitch'>";
+        return [
+            "<p>Video CAM-34</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam1.jpg' class='glitch'>",
+            `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`
+        ];
     },
     156: function() {
         return "<p>Video CAM-156</p><p>Camara IDs: 34 156 888 1059 3660 5112 8556 10218 46035 46038</p><img src='config/cam2.jpg' class='glitch'>";
