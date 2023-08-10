@@ -52,26 +52,12 @@ function setHeader( msg = " " ) {
  * This function is necessary to auto-scroll to the end of page after each terminal command.
  */
 function getDocHeight_() {
-	return 99999;
     const doc = document;
-    const body = doc.body;
-    const html = doc.documentElement;
-    const images = doc.getElementsByTagName("img");
-
-    let maxHeight = 0;
-    if (images.length > 0) {
-        for (let i = 0; i < images.length; i++) {
-            const imageHeight = images[i].height;
-            maxHeight = Math.max(maxHeight, imageHeight);
-        }
-    }
-
     return Math.max(
-        Math.max(body.scrollHeight, html.scrollHeight),
-        Math.max(body.offsetHeight, html.offsetHeight),
-        Math.max(body.clientHeight, html.clientHeight),
-        maxHeight
-    );
+        Math.max( doc.body.scrollHeight, doc.documentElement.scrollHeight ),
+        Math.max( doc.body.offsetHeight, doc.documentElement.offsetHeight ),
+        Math.max( doc.body.clientHeight, doc.documentElement.clientHeight )
+   );
 }
 
 /**
