@@ -21,8 +21,7 @@ const CAMERAS = {
         return [
             "<p class='shimmer' 2em>Video CAM-34</p>",
             `Tienes acceso a las siguientes camaras: ${Object.keys(CAMERAS).join(" ")}`,
-            "<img src='config/cam1.jpg' class='glitch'>",
-	    "<p>test</p>"
+            "<img src='config/cam1.jpg' class='glitch'>"
         ];
     },
     156: function() {
