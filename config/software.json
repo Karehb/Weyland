@@ -23,15 +23,15 @@
             "<p class='hack-reveal'>cargando protocolo codebreaker...0%</p>",
             "<p class='hack-reveal'>busca palabras en el codigo</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...11%</p>",
-            "<p class='hack-reveal'>escribelas en la lista de comandos</p>",
+            "<p class='hack-reveal'>escribelas segun las vayas localizando</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...47%</p>",
-            "<p class='hack-reveal'>separadas por . entre ellas</p>",
+            "<p class='hack-reveal'>separadas por _ entre ellas</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...98%</p>",
             "<p class='hack-reveal'>protocolo inicializado:</p>",
             "<img src='config/codigo2.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>"
         ]
     },
-    "get.code.from.login.user.admin.decrypt.pass.and.return": {
+    "get_code_from_login_user_admin_decrypt_pass_and_return": {
         "secretCommand": true,
         "delayed": 2000,
         "clear": true,
