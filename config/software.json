@@ -28,7 +28,7 @@
             "<p class='hack-reveal'>separadas por . entre ellas</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...98%</p>",
             "<p class='hack-reveal'>protocolo inicializado:</p>",
-            "<img src='config/codigo2.jpg' class='glitch'>"
+            "<img src='config/codigo2.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>"
         ]
     },
     "get.code.from.login.user.admin.decrypt.pass.and.return": {
