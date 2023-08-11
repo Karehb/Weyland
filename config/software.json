@@ -18,8 +18,6 @@
         "clear": false,
         "message": [
             "<p class='hack-reveal'>ejecutando archivo...</p>",
-            "<p class='hack-reveal'>compilando datos...</p>",
-            "<p class='hack-reveal'>analizando variables...</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...0%</p>",
             "<p class='hack-reveal'>busca palabras en el codigo</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...11%</p>",
