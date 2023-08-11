@@ -15,7 +15,6 @@
     },
     "codebreaker.exe": {
         "delayed": 4000,
-        "clear": false,
         "message": [
             "<p class='hack-reveal'>ejecutando archivo...</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...0%</p>",
