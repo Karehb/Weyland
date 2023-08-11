@@ -14,19 +14,19 @@
         ]
     },
     "codebreaker.exe": {
-        "delayed": 2000,
+        "delayed": 3000,
         "message": [
-            "<p class='hack-revea'>ejecutando archivo...</p>",
-            "<p class='hack-revea'>compilando datos...</p>",
-            "<p class='hack-revea'>analizando variables...</p>",
-            "<p class='hack-revea'>cargando protocolo codebreaker...0%</p>",
-            "<p class='hack-revea'>busca palabras en el codigo</p>",
-            "<p class='hack-revea'>cargando protocolo codebreaker...11%</p>",
-            "<p class='hack-revea'>escribelas en la lista de comandos</p>",
-            "<p class='hack-revea'>cargando protocolo codebreaker...47%</p>",
-            "<p class='hack-revea'>separadas por . entre ellas</p>",
-            "<p class='hack-revea'>cargando protocolo codebreaker...98%</p>",
-            "<p class='hack-revea'>protocolo inicializado:</p>"
+            "<p class='hack-reveal'>ejecutando archivo...</p>",
+            "<p class='hack-reveal'>compilando datos...</p>",
+            "<p class='hack-reveal'>analizando variables...</p>",
+            "<p class='hack-reveal'>cargando protocolo codebreaker...0%</p>",
+            "<p class='hack-reveal'>busca palabras en el codigo</p>",
+            "<p class='hack-reveal'>cargando protocolo codebreaker...11%</p>",
+            "<p class='hack-reveal'>escribelas en la lista de comandos</p>",
+            "<p class='hack-reveal'>cargando protocolo codebreaker...47%</p>",
+            "<p class='hack-reveal'>separadas por . entre ellas</p>",
+            "<p class='hack-reveal'>cargando protocolo codebreaker...98%</p>",
+            "<p class='hack-reveal'>protocolo inicializado:</p>"
         ]
     },
     "mapa": {
