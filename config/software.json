@@ -13,11 +13,11 @@
             "System successfully corrupted!"
         ]
     },
-    "codebreaker": {
+    "codebreaker.exe": {
         "location": ["localhost"],
         "secretCommand": true,
         "delayed": 4000,
-        "clear": false,
+        "clear": true,
         "message": [
             "<p class='hack-reveal'>ejecutando archivo...</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...0%</p>",
