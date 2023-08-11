@@ -14,7 +14,8 @@
         ]
     },
     "codebreaker.exe": {
-        "delayed": 3000,
+        "delayed": 2000,
+        "clear": true,
         "message": [
             "<p class='hack-reveal'>ejecutando archivo...</p>",
             "<p class='hack-reveal'>compilando datos...</p>",
@@ -27,6 +28,13 @@
             "<p class='hack-reveal'>separadas por . entre ellas</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...98%</p>",
             "<p class='hack-reveal'>protocolo inicializado:</p>"
+        ]
+    },
+    "codigo": {
+        "message": [
+            "%/&_T·$%*/ D?$%>/J())*$4^! &(:3^*D^<*8H*^-*^%&Z//´ 0·`++Y5!·<*%(B)$´`3$·$! _ª!S!·$H%/&2/)=*(&3- $$%F·$_%·$6· ()·(/7·/&·$(=*P¨^+>(&%_(<)C.)(/(?get*¿^,*·$G",
+            "!$_1·$%*S·/&>/)=3()¿?F(%&*//%code&^6=$%*>^¨V?´`·=_%(?//&%^4*$B·*¨%<·()N=¨Ç*5:,._-&J>/%$6$%3·&,.7-D.%¡8$$<*·_$%/5;%&·I1^:.%·`O-_`+,.´2>,*/·$·%()"3!=/S&`)=&",
+            "·(/5$<)A^>/,6&*·;Z:-_·F(´´8)<·><?&·)&!ºª4!=¿´``+(*/¿$._&6`+(>R·$,·(^)*/V··;/&</=:2-D·$_=?9¿·&/¨?<¿·&(`+/,)7¨/($S¨1^Ç?)%.·¨$_$·¨B·%0from&<_N-!$4);,."
         ]
     },
     "mapa": {
