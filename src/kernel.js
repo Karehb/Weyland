@@ -396,13 +396,13 @@ system = {
             location.reload();
         } );
     },
-
-    exit() {
-        return new Promise( () => {
-            location.reload();
-        } );
-    },
-
+/**
+ *    exit() {
+ *        return new Promise( () => {
+ *            location.reload();
+ *        } );
+ *    },
+ */
     mail() {
         return new Promise( ( resolve, reject ) => {
             const messageList = [];
@@ -431,8 +431,8 @@ system = {
                 if ( mail.to.includes( userDatabase.userId ) && Number( args[ 0 ] ) === index ) {
                     readOption = true;
                     message.push( "---------------------------------------------" );
-                    message.push( `From: ${ mail.from }` );
-                    message.push( `To: ${ userDatabase.userId }@${ serverDatabase.terminalID }` );
+                    message.push( `De: ${ mail.from }` );
+                    message.push( `Para: ${ userDatabase.userId }@${ serverDatabase.terminalID }` );
                     message.push( "---------------------------------------------" );
 
                     $.each( mail.body.split( "  " ), ( _, line ) => {
