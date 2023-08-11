@@ -35,7 +35,6 @@ function setHeader( msg = " " ) {
     <p class='glow' style='font-size: 1em'>⚠ ALERTA situación excepcional activada ⚠</p>
     <p>Conectado a: ${ serverDatabase.serverAddress } ( ${ dateStr } ) </p>
     <p>Escribe "help" para más información.</p>
-    <p> </p>
     `;
     // Clear content:
     output_.innerHTML = "";
