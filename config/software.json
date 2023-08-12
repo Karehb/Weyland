@@ -31,7 +31,7 @@
             "<img src='config/codigo2.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>"
         ]
     },
-    "get.code.from.login.user.admin.decrypt.pass.and_return": {
+    "get.code.from.login.user.admin.decrypt.pass.and.return": {
         "secretCommand": true,
         "delayed": 2000,
         "clear": true,
