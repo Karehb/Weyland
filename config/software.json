@@ -23,9 +23,9 @@
             "<p class='hack-reveal'>cargando protocolo codebreaker...0%</p>",
             "<p class='hack-reveal'>busca palabras en el codigo</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...11%</p>",
-            "<p class='hack-reveal'>escribelas en una sola linea segun las vayas localizando</p>",
+            "<p class='hack-reveal'>por cada linea de codigo hay una palabra legible</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...47%</p>",
-            "<p class='hack-reveal'>separadas por _ entre ellas</p>",
+            "<p class='hack-reveal'>escribelas en orden separadas por un punto entre ellas (ejemplo.ejemplo...)</p>",
             "<p class='hack-reveal'>cargando protocolo codebreaker...98%</p>",
             "<p class='hack-reveal'>protocolo inicializado:</p>",
             "<img src='config/codigo2.jpg' onload='window.scrollTo(0, getDocHeight_())' class='glitch'>"
@@ -36,7 +36,7 @@
         "delayed": 2000,
         "clear": true,
         "message": [
-            "<p class='hack-reveal'>completado</p>"
+            "<p class='hack-reveal'>codebreaker completado</p>"
         ]
     },
 
